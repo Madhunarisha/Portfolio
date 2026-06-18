@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhumitha K | Executive Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css for instant premium loads -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- AOS (Animate on Scroll) for dynamic scroll reveals -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        .bg-mesh {
+            background-color: #0b1329;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(6, 78, 59, 0.4) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.8) 0px, transparent 50%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(52, 211, 153, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-mesh text-slate-200 font-sans antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- FLOATING SIDEBAR NAVIGATION DOCK (Hidden on Mobile) -->
+    <nav class="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden xl:flex flex-col gap-4 bg-slate-950/60 border border-slate-800 p-3 rounded-2xl backdrop-blur-md animate__animated animate__fadeInLeft">
+        <a href="#home" class="p-3 text-slate-400 hover:text-emerald-400 rounded-xl hover:bg-slate-900 transition-all group relative" title="Home">
+            <i class="fas fa-home text-lg"></i>
+            <span class="absolute left-14 scale-0 group-hover:scale-100 bg-slate-900 text-xs px-2 py-1 rounded border border-slate-700 transition-all origin-left">Home</span>
+        </a>
+        <a href="#about" class="p-3 text-slate-400 hover:text-emerald-400 rounded-xl hover:bg-slate-900 transition-all group relative" title="Profile">
+            <i class="fas fa-user text-lg"></i>
+            <span class="absolute left-14 scale-0 group-hover:scale-100 bg-slate-900 text-xs px-2 py-1 rounded border border-slate-700 transition-all origin-left">Profile</span>
+        </a>
+        <a href="#experience" class="p-3 text-slate-400 hover:text-emerald-400 rounded-xl hover:bg-slate-900 transition-all group relative" title="Experience">
+            <i class="fas fa-briefcase text-lg"></i>
+            <span class="absolute left-14 scale-0 group-hover:scale-100 bg-slate-900 text-xs px-2 py-1 rounded border border-slate-700 transition-all origin-left">Experience</span>
+        </a>
+        <a href="#education" class="p-3 text-slate-400 hover:text-emerald-400 rounded-xl hover:bg-slate-900 transition-all group relative" title="Education">
+            <i class="fas fa-graduation-cap text-lg"></i>
+            <span class="absolute left-14 scale-0 group-hover:scale-100 bg-slate-900 text-xs px-2 py-1 rounded border border-slate-700 transition-all origin-left">Education</span>
+        </a>
+        <a href="#skills" class="p-3 text-slate-400 hover:text-emerald-400 rounded-xl hover:bg-slate-900 transition-all group relative" title="Skills">
+            <i class="fas fa-tools text-lg"></i>
+            <span class="absolute left-14 scale-0 group-hover:scale-100 bg-slate-900 text-xs px-2 py-1 rounded border border-slate-700 transition-all origin-left">Skills</span>
+        </a>
+        <a href="#projects" class="p-3 text-slate-400 hover:text-emerald-400 rounded-xl hover:bg-slate-900 transition-all group relative" title="Projects">
+            <i class="fas fa-project-diagram text-lg"></i>
+            <span class="absolute left-14 scale-0 group-hover:scale-100 bg-slate-900 text-xs px-2 py-1 rounded border border-slate-700 transition-all origin-left">Projects</span>
+        </a>
+        <a href="#awards" class="p-3 text-slate-400 hover:text-emerald-400 rounded-xl hover:bg-slate-900 transition-all group relative" title="Awards">
+            <i class="fas fa-award text-lg"></i>
+            <span class="absolute left-14 scale-0 group-hover:scale-100 bg-slate-900 text-xs px-2 py-1 rounded border border-slate-700 transition-all origin-left">Honors</span>
+        </a>
+    </nav>
+
+    <!-- MOBILE NAVIGATION FIXED BAR -->
+    <nav class="xl:hidden fixed bottom-0 left-0 w-full bg-slate-950/90 border-t border-slate-800 backdrop-blur-md z-50 flex justify-around py-3 text-slate-400">
+        <a href="#home" class="flex flex-col items-center text-xs hover:text-emerald-400"><i class="fas fa-home mb-1"></i>Home</a>
+        <a href="#about" class="flex flex-col items-center text-xs hover:text-emerald-400"><i class="fas fa-user mb-1"></i>Profile</a>
+        <a href="#experience" class="flex flex-col items-center text-xs hover:text-emerald-400"><i class="fas fa-briefcase mb-1"></i>Jobs</a>
+        <a href="#skills" class="flex flex-col items-center text-xs hover:text-emerald-400"><i class="fas fa-tools mb-1"></i>Skills</a>
+        <a href="#projects" class="flex flex-col items-center text-xs hover:text-emerald-400"><i class="fas fa-project-diagram mb-1"></i>Work</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+  <section id="home" class="min-h-screen flex items-center justify-center relative px-4 overflow-hidden pt-20 md:pt-0">
+        <div class="absolute right-0 top-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none hidden lg:block"></div>
+        
+        <div class="max-w-6xl mx-auto w-full grid md:grid-cols-12 gap-8 items-center z-10 py-12">
+            
+            <div class="md:col-span-7 space-y-6 text-center md:text-left order-2 md:order-1">
+                <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs px-4 py-1.5 rounded-full font-bold uppercase tracking-widest animate__animated animate__fadeInDown">
+                    <i class="fas fa-star text-amber-400 animate-spin" style="animation-duration: 4s;"></i> University Gold Medalist
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-white animate__animated animate__fadeInUp">
+                    MADHUMITHA K
+                </h1>
+                
+                <p class="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl font-light leading-relaxed animate__animated animate__fadeInUp animate__delay-1s">
+                    <span class="text-emerald-400 font-medium">Technical Coordinator</span> &bull; Educator &bull; Full-Stack Developer
+                </p>
+                
+                <div class="flex flex-wrap justify-center md:justify-start gap-3 text-xs pt-2 animate__animated animate__fadeInUp animate__delay-1s">
+                    <span class="bg-slate-900/60 border border-slate-800 px-4 py-2 rounded-full flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-emerald-400"></i> Theni, Tamil Nadu, India
+                    </span>
+                    <a href="tel:+917200887587" class="bg-slate-900/60 border border-slate-800 px-4 py-2 rounded-full flex items-center gap-2 hover:border-emerald-500/50 transition">
+                        <i class="fas fa-phone text-emerald-400"></i> +91 7200887587
+                    </a>
+                    <a href="mailto:harithakrishnan3j@gmail.com" class="bg-slate-900/60 border border-slate-800 px-4 py-2 rounded-full flex items-center gap-2 hover:border-emerald-500/50 transition">
+                        <i class="fas fa-envelope text-emerald-400"></i> harithakrishnan3j@gmail.com
+                    </a>
+                </div>
+
+                <div class="pt-4 flex flex-wrap justify-center md:justify-start gap-4 animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#about" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg shadow-emerald-900/20 transition-all hover:scale-105">Explore Profile</a>
+                    <a href="#experience" class="bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 font-semibold px-8 py-3.5 rounded-xl transition-all hover:scale-105">View Journey</a>
+                </div>
+            </div>
+
+            <div class="md:col-span-5 flex justify-center order-1 md:order-2 animate__animated animate__fadeInRight">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-tr from-emerald-500 to-slate-800 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
+                    
+                    <div class="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 bg-slate-950/60 border border-slate-800 p-3 rounded-3xl backdrop-blur-md overflow-hidden shadow-2xl">
+                        <img src="madhu.jpeg" 
+                             alt="Madhumitha K" 
+                             class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-all duration-500"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        
+                        <div class="hidden absolute inset-3 bg-gradient-to-br from-slate-900 to-slate-950 rounded-2xl items-center justify-center flex-col text-slate-600 text-center p-4 border border-slate-800/50">
+                            <i class="fas fa-user-circle text-5xl text-emerald-500/40 mb-2"></i>
+                            <span class="text-xs font-mono tracking-wider uppercase">madhu.jpeg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-slate-500 animate-bounce text-xl hidden md:block">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="max-w-6xl mx-auto px-4 md:px-8 pb-32 space-y-32">
+
+        <!-- PROFILE & OBJECTIVE -->
+        <section id="about" class="scroll-mt-24 space-y-8" data-aos="fade-up">
+            <div class="flex items-center gap-4">
+                <div class="h-10 w-2 bg-emerald-500 rounded-full"></div>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Professional Profile</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 space-y-6">
+                    <p class="text-lg text-slate-400 leading-relaxed text-justify">
+                        A highly motivated and accomplished Information Technology professional with a strong academic foundation, leadership experience, teaching expertise, and technical coordination skills. A University Gold Medalist in both B.Sc. and M.Sc. Information Technology from Nadar Saraswathi College of Arts and Science, with a proven track record of academic excellence and innovation.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed text-justify">
+                        Possessing professional experience in education, software development, technical training, and project management, I have successfully guided students, coordinated technical programs, and contributed to the development of innovative technology solutions. Currently serving as a Technical Coordinator at Hazzino Technologies, where I mentor students, coordinate internships and technical training programs, and oversee software development initiatives.
+                    </p>
+                    <div class="bg-emerald-950/30 border border-emerald-500/20 p-5 rounded-2xl relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-3 bg-emerald-500/10 rounded-bl-xl text-emerald-400 text-xs uppercase font-bold tracking-wider">Product Launch</div>
+                        <h4 class="text-white font-bold mb-2 flex items-center gap-2"><i class="fas fa-brain text-emerald-400"></i> MIAI (My Intelligent AI Study Planner)</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            One of my notable achievements includes conceptualizing, designing, and launching MIAI, an AI-powered academic planning platform that helps students organize learning activities, track academic progress, and improve productivity through intelligent study recommendations.
+                        </p>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <h3 class="text-white font-bold text-lg border-b border-slate-800 pb-2 flex items-center gap-2"><i class="fas fa-bullseye text-emerald-400"></i> Career Objective</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed text-justify">
+                            To contribute my technical expertise, leadership abilities, and educational experience to an organization that values innovation, learning, and growth, while continuously enhancing my professional skills and making meaningful contributions to society through technology and education.
+                        </p>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest">Core Values</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-900 text-slate-300 text-xs px-2.5 py-1 rounded-md">Innovation</span>
+                            <span class="bg-slate-900 text-slate-300 text-xs px-2.5 py-1 rounded-md">Mentorship</span>
+                            <span class="bg-slate-900 text-slate-300 text-xs px-2.5 py-1 rounded-md">Excellence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE EXECUTED -->
+        <section id="experience" class="scroll-mt-24 space-y-8" data-aos="fade-up">
+            <div class="flex items-center gap-4">
+                <div class="h-10 w-2 bg-emerald-500 rounded-full"></div>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Professional Experience</h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Timeline Card 1 -->
+                <div class="glass-card p-6 md:p-8 rounded-2xl grid md:grid-cols-4 gap-6">
+                    <div class="md:col-span-1 space-y-2">
+                        <span class="text-emerald-400 font-mono font-bold text-sm bg-emerald-500/10 px-3 py-1 rounded-md inline-block">February 2026– Present</span>
+                        <h3 class="text-xl font-extrabold text-white">Technical Coordinator</h3>
+                        <p class="text-slate-400 text-sm">Hazzino Technologies</p>
+                    </div>
+                    <div class="md:col-span-3">
+                        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Key Responsibilities & Scope</h4>
+                        <ul class="space-y-2.5 text-sm text-slate-400">
+                            <li class="flex items-start gap-2.5"><i class="fas fa-check-circle text-emerald-500 mt-0.5 shrink-0"></i> Coordinate technical training and internship programs.</li>
+                            <li class="flex items-start gap-2.5"><i class="fas fa-check-circle text-emerald-500 mt-0.5 shrink-0"></i> Mentor students in Web Development, MERN Stack, Databases, and Software Engineering.</li>
+                            <li class="flex items-start gap-2.5"><i class="fas fa-check-circle text-emerald-500 mt-0.5 shrink-0"></i> Guide final-year projects and assist students in project development and deployment.</li>
+                            <li class="flex items-start gap-2.5"><i class="fas fa-check-circle text-emerald-500 mt-0.5 shrink-0"></i> Conduct workshops, seminars, and technical sessions.</li>
+                            <li class="flex items-start gap-2.5"><i class="fas fa-check-circle text-emerald-500 mt-0.5 shrink-0"></i> Manage software development projects and technical documentation.</li>
+                            <li class="flex items-start gap-2.5"><i class="fas fa-check-circle text-emerald-500 mt-0.5 shrink-0"></i> Coordinate with educational institutions and industry experts for skill development initiatives.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Card 2 -->
+                <div class="glass-card p-6 md:p-8 rounded-2xl grid md:grid-cols-4 gap-6">
+                    <div class="md:col-span-1 space-y-2">
+                        <span class="text-slate-400 font-mono font-bold text-sm bg-slate-800 px-3 py-1 rounded-md inline-block">Feb 2021 – Apr 2023</span>
+                        <h3 class="text-xl font-extrabold text-white">Teacher</h3>
+                        <p class="text-slate-400 text-sm">The Spice Valley Public School, Bodinayakkanur</p>
+                    </div>
+                    <div class="md:col-span-3">
+                        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Key Responsibilities & Scope</h4>
+                        <ul class="space-y-2.5 text-sm text-slate-400">
+                            <li class="flex items-start gap-2.5"><i class="fas fa-check-circle text-slate-500 mt-0.5 shrink-0"></i> Delivered quality classroom instruction and academic mentoring.</li>
+                            <li class="flex items-start gap-2.5"><i class="fas fa-check-circle text-slate-500 mt-0.5 shrink-0"></i> Prepared lesson plans and assessment materials.</li>
+                            <li class="flex items-start gap-2.5"><i class="fas fa-check-circle text-slate-500 mt-0.5 shrink-0"></i> Guided students in academic and extracurricular activities.</li>
+                            <li class="flex items-start gap-2.5"><i class="fas fa-check-circle text-slate-500 mt-0.5 shrink-0"></i> Maintained effective classroom management and student engagement.</li>
+                            <li class="flex items-start gap-2.5"><i class="fas fa-check-circle text-slate-500 mt-0.5 shrink-0"></i> Encouraged innovative learning practices and critical thinking.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION BACKGROUND -->
+        <section id="education" class="scroll-mt-24 space-y-8" data-aos="fade-up">
+            <div class="flex items-center gap-4">
+                <div class="h-10 w-2 bg-emerald-500 rounded-full"></div>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Educational Qualifications</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- degree 1 -->
+                <div class="glass-card p-6 rounded-2xl relative overflow-hidden group border-l-4 border-l-emerald-500">
+                    <div class="absolute -right-8 -bottom-8 text-slate-900 text-9xl font-black group-hover:text-emerald-950/20 transition-all select-none">9.2</div>
+                    <span class="text-emerald-400 font-mono text-xs font-bold bg-emerald-500/10 px-2.5 py-1 rounded">2023 – 2025</span>
+                    <h3 class="text-xl font-bold text-white mt-3">Master of Science (M.Sc.)</h3>
+                    <p class="text-sm text-emerald-400 font-medium">Information Technology</p>
+                    <p class="text-xs text-slate-500 mb-4">Nadar Saraswathi College of Arts and Science, Theni</p>
+                    <ul class="space-y-1.5 text-xs text-slate-400 relative z-10">
+                        <li><i class="fas fa-award text-amber-500 mr-1.5"></i> **CGPA: 9.2** (University Gold Medalist)</li>
+                        <li><i class="fas fa-star text-emerald-400 mr-1.5"></i> Best Outgoing Student of the Year – 2025</li>
+                        <li><i class="fas fa-scroll text-slate-400 mr-1.5"></i> Presented & published research papers in national & international conferences</li>
+                    </ul>
+                </div>
+                <!-- degree 2 -->
+                <div class="glass-card p-6 rounded-2xl relative overflow-hidden group border-l-4 border-l-slate-700">
+                    <div class="absolute -right-8 -bottom-8 text-slate-900 text-9xl font-black group-hover:text-slate-800/40 transition-all select-none">8.4</div>
+                    <span class="text-slate-400 font-mono text-xs font-bold bg-slate-800 px-2.5 py-1 rounded">2017 – 2020</span>
+                    <h3 class="text-xl font-bold text-white mt-3">Bachelor of Science (B.Sc.)</h3>
+                    <p class="text-sm text-slate-400 font-medium">Information Technology</p>
+                    <p class="text-xs text-slate-500 mb-4">Nadar Saraswathi College of Arts and Science, Theni</p>
+                    <ul class="space-y-1.5 text-xs text-slate-400 relative z-10">
+                        <li><i class="fas fa-award text-amber-500 mr-1.5"></i> **CGPA: 8.4** (University Gold Medalist)</li>
+                        <li><i class="fas fa-users text-slate-400 mr-1.5"></i> Active participant in academic, technical, and leadership activities</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEADERSHIP SECTION -->
+        <section class="scroll-mt-24 space-y-8" data-aos="fade-up">
+            <div class="flex items-center gap-4">
+                <div class="h-10 w-2 bg-emerald-500 rounded-full"></div>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Leadership Experience</h2>
+            </div>
+            <div class="glass-card p-6 md:p-8 rounded-2xl">
+                <div class="flex flex-wrap justify-between items-start gap-4 border-b border-slate-800 pb-4 mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Student Coordinator – BIGB(P)IT Association</h3>
+                        <p class="text-sm text-emerald-400">Department of Information Technology</p>
+                        <p class="text-xs text-slate-500">Nadar Saraswathi College of Arts and Science, Theni</p>
+                    </div>
+                    <span class="bg-slate-900 border border-slate-800 text-slate-400 text-xs px-3 py-1 rounded-md font-mono">During B.Sc. (2017 – 2020)</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-400">
+                    <ul class="space-y-2">
+                        <li class="flex gap-2"><i class="fas fa-angle-right text-emerald-400 mt-1"></i> Organized technical and departmental events.</li>
+                        <li class="flex gap-2"><i class="fas fa-angle-right text-emerald-400 mt-1"></i> Coordinated communication between faculty members and students.</li>
+                        <li class="flex gap-2"><i class="fas fa-angle-right text-emerald-400 mt-1"></i> Led student teams in planning and executing academic and extracurricular activities.</li>
+                    </ul>
+                    <ul class="space-y-2">
+                        <li class="flex gap-2"><i class="fas fa-angle-right text-emerald-400 mt-1"></i> Promoted student participation in technical competitions and research initiatives.</li>
+                        <li class="flex gap-2"><i class="fas fa-angle-right text-emerald-400 mt-1"></i> Developed strong leadership, communication, event management, and team coordination skills.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS COMPREHENSIVE MATRIX -->
+        <section id="skills" class="scroll-mt-24 space-y-8" data-aos="fade-up">
+            <div class="flex items-center gap-4">
+                <div class="h-10 w-2 bg-emerald-500 rounded-full"></div>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Technical Skills Matrix</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Group 1 -->
+                <div class="glass-card p-5 rounded-xl space-y-3">
+                    <h3 class="text-white font-bold flex items-center gap-2"><i class="fas fa-terminal text-emerald-400"></i> Programming & Web</h3>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="bg-slate-900 border border-slate-800 text-xs px-3 py-1 rounded-md text-slate-300">Python</span>
+                        <span class="bg-slate-900 border border-slate-800 text-xs px-3 py-1 rounded-md text-slate-300">JavaScript</span>
+                        <span class="bg-slate-900 border border-slate-800 text-xs px-3 py-1 rounded-md text-slate-300">HTML5 / CSS3</span>
+                        <span class="bg-slate-900 border border-slate-800 text-xs px-3 py-1 rounded-md text-slate-300">MERN Stack</span>
+                    </div>
+                </div>
+                <!-- Skill Group 2 -->
+                <div class="glass-card p-5 rounded-xl space-y-3">
+                    <h3 class="text-white font-bold flex items-center gap-2"><i class="fas fa-database text-emerald-400"></i> Database Technologies</h3>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="bg-slate-900 border border-slate-800 text-xs px-3 py-1 rounded-md text-slate-300">MongoDB</span>
+                        <span class="bg-slate-900 border border-slate-800 text-xs px-3 py-1 rounded-md text-slate-300">MySQL</span>
+                        <span class="bg-slate-900 border border-slate-800 text-xs px-3 py-1 rounded-md text-slate-300">SQL</span>
+                    </div>
+                </div>
+                <!-- Skill Group 3 -->
+                <div class="glass-card p-5 rounded-xl space-y-3">
+                    <h3 class="text-white font-bold flex items-center gap-2"><i class="fas fa-sliders-h text-emerald-400"></i> Tools & Engineering</h3>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="bg-slate-900 border border-slate-800 text-xs px-3 py-1 rounded-md text-slate-300">Git & GitHub</span>
+                        <span class="bg-slate-900 border border-slate-800 text-xs px-3 py-1 rounded-md text-slate-300">VS Code</span>
+                        <span class="bg-slate-900 border border-slate-800 text-xs px-3 py-1 rounded-md text-slate-300">MS Office Suite</span>
+                        <span class="bg-slate-900 border border-slate-800 text-xs px-3 py-1 rounded-md text-slate-300">AI Integration Concepts</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competency Blocks -->
+            <div class="pt-4 space-y-3">
+                <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest">Core Competencies</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-emerald-950/40 text-emerald-400 border border-emerald-900/40 text-xs px-3 py-1 rounded-full">Leadership & Team Management</span>
+                    <span class="bg-emerald-950/40 text-emerald-400 border border-emerald-900/40 text-xs px-3 py-1 rounded-full">Technical Coordination</span>
+                    <span class="bg-emerald-950/40 text-emerald-400 border border-emerald-900/40 text-xs px-3 py-1 rounded-full">Student Mentoring</span>
+                    <span class="bg-emerald-950/40 text-emerald-400 border border-emerald-900/40 text-xs px-3 py-1 rounded-full">Public Speaking & Event Planning</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS ARCHITECTURE -->
+        <section id="projects" class="scroll-mt-24 space-y-8" data-aos="fade-up">
+            <div class="flex items-center gap-4">
+                <div class="h-10 w-2 bg-emerald-500 rounded-full"></div>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Academic Engineering Projects</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Project card 1 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">Security Architecture</span>
+                        <h3 class="text-xl font-bold text-white">Land Registry Management System</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed text-justify">
+                            A blockchain-based software solution developed to manage land registration records securely, ensuring transparency, authenticity, and data integrity in property transactions.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 text-[10px] text-slate-400 font-mono">
+                        <span class="bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">Blockchain Concepts</span>
+                        <span class="bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">Database Management</span>
+                        <span class="bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">Web Technologies</span>
+                    </div>
+                </div>
+                <!-- Project card 2 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-3">
+                        <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">Cryptography / Stegano</span>
+                        <h3 class="text-xl font-bold text-white">Steganography Application</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed text-justify">
+                            A software application designed for secure communication through hidden data transmission using steganographic techniques. Focuses on data embedding, confidentiality metrics, and system protection.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 text-[10px] text-slate-400 font-mono">
+                        <span class="bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">Secure Embedding</span>
+                        <span class="bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">Data Confidentiality</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AWARDS & KEYNOTES -->
+<section id="awards" class="scroll-mt-24 space-y-8" data-aos="fade-up">
+    <div class="flex items-center gap-4">
+        <div class="h-10 w-2 bg-emerald-500 rounded-full"></div>
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">Achievements & Research Keynotes</h2>
+    </div>
+    
+    <!-- High-Impact Summary Milestone Banner -->
+    <div class="bg-gradient-to-r from-emerald-950/50 via-slate-900/40 to-transparent border border-emerald-500/20 p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-6 shadow-md mb-6">
+        <div class="h-16 w-16 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-3xl font-black shrink-0 shadow-inner">
+            50+
+        </div>
+        <div class="text-center sm:text-left space-y-1">
+            <h3 class="text-white font-bold text-lg tracking-wide">Extensive Excellence Record</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+                Received more than <span class="text-emerald-400 font-semibold">50 celebrated awards</span> honoring outstanding performance across various academic, technical, curricular, and co-curricular initiatives.
+            </p>
+        </div>
+    </div>
+
+    <!-- Individual Honor Grid -->
+    <div class="grid sm:grid-cols-2 gap-4">
+        <div class="glass-card p-4 rounded-xl flex items-start gap-3">
+            <i class="fas fa-trophy text-amber-400 text-lg mt-0.5 animate__animated animate__bounceIn"></i>
+            <p class="text-sm text-slate-300 font-medium">University Gold Medalist – M.Sc. Information Technology</p>
+        </div>
+        <div class="glass-card p-4 rounded-xl flex items-start gap-3">
+            <i class="fas fa-trophy text-amber-400 text-lg mt-0.5"></i>
+            <p class="text-sm text-slate-300 font-medium">University Gold Medalist – B.Sc. Information Technology</p>
+        </div>
+        <div class="glass-card p-4 rounded-xl flex items-start gap-3">
+            <i class="fas fa-medal text-emerald-400 text-lg mt-0.5"></i>
+            <p class="text-sm text-slate-300 font-medium">Best Outgoing Student of the Year – 2025</p>
+        </div>
+        <div class="glass-card p-4 rounded-xl flex items-start gap-3">
+            <i class="fas fa-award text-emerald-400 text-lg mt-0.5"></i>
+            <p class="text-sm text-slate-300 font-medium">Best Performer of Kalasangami'19 – NSCAS</p>
+        </div>
+    </div>
+
+           <div class="pt-6 pb-6 px-6 bg-gradient-to-br from-emerald-950/40 to-slate-900/60 border-2 border-emerald-500/50 rounded-2xl space-y-4 shadow-lg shadow-emerald-950/50 relative overflow-hidden animate__animated animate__pulse">
+                <!-- Decorative background glow element -->
+                <div class="absolute -right-10 -top-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+                
+                <div class="flex items-center gap-2.5">
+                    <span class="flex h-2.5 w-2.5 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                    </span>
+                    <h4 class="text-xs font-black text-emerald-400 uppercase tracking-widest">Research Presentations & Feature Spotlights</h4>
+                </div>
+                
+                <div class="grid sm:grid-cols-1 gap-3 text-sm text-slate-200 font-medium">
+                    <div class="flex items-center gap-3 bg-emerald-950/30 border border-emerald-500/20 p-3 rounded-xl hover:bg-emerald-950/50 transition-all">
+                        <i class="fas fa-trophy text-amber-400 text-base shrink-0"></i> 
+                        <span>First Prize – National Level Research Paper Submission, <span class="text-emerald-400 font-bold">PETCON-NFRC 2023</span></span>
+                    </div>
+                    <div class="grid sm:grid-cols-1 gap-3 text-sm text-slate-200 font-medium">
+                    <div class="flex items-center gap-3 bg-emerald-950/30 border border-emerald-500/20 p-3 rounded-xl hover:bg-emerald-950/50 transition-all">
+                        <i class="fas fa-trophy text-amber-400 text-base shrink-0"></i> 
+                        <span>Best Presenter Award – International Conference at SACWC, <span class="text-emerald-400 font-bold">ICECTIA'24</span></span>
+                    </div>
+                     <div class="grid sm:grid-cols-1 gap-3 text-sm text-slate-200 font-medium">
+                    <div class="flex items-center gap-3 bg-emerald-950/30 border border-emerald-500/20 p-3 rounded-xl hover:bg-emerald-950/50 transition-all">
+                        <i class="fas fa-trophy text-amber-400 text-base shrink-0"></i> 
+                        <span>Best Paper Award- International Conference at NSCAS <span class="text-emerald-400 font-bold">ICSCFTT'24</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- FOOTER & CONFIRMED DECLARATION -->
+        <footer id="contact" class="scroll-mt-24 bg-gradient-to-br from-slate-950 to-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12 text-center space-y-6">
+            <h2 class="text-3xl font-black text-white">Let's Connect</h2>
+            <p class="text-sm text-slate-400 max-w-lg mx-auto leading-relaxed">
+                Open to discussions regarding educational technical management, curriculum engineering, and full-stack enterprise web integrations.
+            </p>
+            
+            <!-- Interactive Communication Launchpad -->
+            <div class="flex justify-center gap-4 pt-2">
+                <!-- Direct Email Client Link -->
+                <a href="mailto:harithakrishnan3j@gmail.com" 
+                   class="h-12 w-12 rounded-xl bg-slate-900 hover:bg-emerald-600 transition-all duration-300 text-slate-300 hover:text-white flex items-center justify-center border border-slate-800 shadow-md hover:scale-110" 
+                   title="Send Email">
+                    <i class="fas fa-envelope text-lg"></i>
+                </a>
+                
+                <!-- Instant WhatsApp Chat Link -->
+                <a href="https://wa.me/917200887587" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="h-12 w-12 rounded-xl bg-slate-900 hover:bg-green-500 transition-all duration-300 text-slate-300 hover:text-white flex items-center justify-center border border-slate-800 shadow-md hover:scale-110" 
+                   title="Chat on WhatsApp">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+            </div>
+            
+            <div class="text-[11px] text-slate-600 tracking-wide max-w-xl mx-auto border-t border-slate-900 pt-6 uppercase italic">
+                "I hereby declare that the information furnished above is true and correct to the best of my knowledge and belief."
+            </div>
+            
+            <div class="text-sm font-bold text-slate-400 pt-2">
+                MADHUMITHA K <br>
+                <span class="text-xs text-slate-500 font-normal">Technical Coordinator &bull; Hazzino Technologies, Theni</span>
+            </div>
+            
+        </footer>
+
+    </div>
+    <!-- AOS Animation Initialization Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            delay: 50
+        });
+    </script>
+</body>
+</html>
